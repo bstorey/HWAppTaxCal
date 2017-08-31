@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/holo_green_light"
+    android:padding="16dp"
+    tools:context="com.homework.basfa.taxcalculator.TaxCalculator">
+
+    <TextView
+        android:id="@+id/enterAmount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:text="Enter Amount:"
+        android:textColor="@android:color/white"
+        android:textSize="18sp"
+        android:textStyle="bold"/>
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/dollarAmount"
+        android:layout_alignBottom="@+id/dollarAmount"
+        android:layout_toStartOf="@+id/dollarAmount"
+        android:text="$"
+        android:textColor="@android:color/white"
+        android:textSize="18sp"/>
+
+    <EditText
+        android:id="@+id/dollarAmount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/enterAmount"
+        android:layout_centerHorizontal="true"
+        android:backgroundTint="@android:color/white"
+        android:ems="10"
+        android:inputType="numberDecimal"
+        android:textAlignment="center"
+        android:textColor="@android:color/white"
+        android:textColorHighlight="@android:color/white"
+        android:textColorLink="@android:color/white"
+        android:textCursorDrawable="@android:color/white"/>
+
+    <TextView
+        android:id="@+id/selectState"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/dollarAmount"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="38dp"
+        android:text="Select State:"
+        android:textColor="@android:color/white"
+        android:textSize="18sp"
+        android:textStyle="bold"/>
+
+    <RadioGroup
+        android:id="@+id/states"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/dollarAmount"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="66dp">
+
+        <RadioButton
+            android:id="@+id/california"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="CA"
+            android:textColor="@android:color/white"
+            app:buttonTint="@android:color/white"/>
+
+        <RadioButton
+            android:id="@+id/illinois"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/states"
+            android:layout_centerHorizontal="true"
+            android:layout_weight="1"
+            android:text="IL"
+            android:textColor="@android:color/white"
+            app:buttonTint="@android:color/white"/>
+
+        <RadioButton
+            android:id="@+id/newYork"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="NY"
+            android:textColor="@android:color/white"
+            app:buttonTint="@android:color/white"/>
+
+        <RadioButton
+            android:id="@+id/texas"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="TX"
+            android:textColor="@android:color/white"
+            app:buttonTint="@android:color/white"/>
+
+    </RadioGroup>
+
+    <Button
+        android:id="@+id/calculateTaxBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/states"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="50dp"
+        android:backgroundTint="@android:color/white"
+        android:fontFamily="sans-serif"
+        android:text="Calculate Tax"
+        android:textColor="@android:color/holo_green_light"
+        android:textSize="18sp"
+        android:textStyle="bold"/>
+
+    <TextView
+        android:id="@+id/textView6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/calculateTaxBtn"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="63dp"
+        android:text="Tax Amount:"
+        android:textColor="@android:color/white"
+        android:textSize="18sp"
+        android:textStyle="bold"/>
+
+    <TextView
+        android:id="@+id/textView8"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/taxAmount"
+        android:layout_alignBottom="@+id/taxAmount"
+        android:layout_alignStart="@+id/dollarAmount"
+        android:text="$"
+        android:textColor="@android:color/white"
+        android:textSize="24sp"/>
+
+    <TextView
+        android:id="@+id/taxAmount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textView6"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="23dp"
+        android:backgroundTint="@android:color/white"
+        android:text=""
+        android:textAlignment="center"
+        android:textAllCaps="true"
+        android:textColor="@android:color/white"
+        android:textSize="24sp"/>
+
+</RelativeLayout>
